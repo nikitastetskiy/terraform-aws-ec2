@@ -4,7 +4,7 @@ terraform {
     organization = "cesarfn4-demo"
 
     workspaces {
-      name = "learn-terraform-cloud"
+      name = "terraform-aws-deploy"
     }
   }
 
