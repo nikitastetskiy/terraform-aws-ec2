@@ -48,6 +48,7 @@ resource "aws_network_interface" "ubuntu_network_interface" {
 resource "aws_instance" "ubuntu" {
   ami           = data.aws_ami.ubuntu_ami.id
   instance_type = var.instance_type
+  associate_public_ip_address = true
   
   network_interface {
     network_interface_id = aws_network_interface.ubuntu_network_interface.id
