@@ -18,7 +18,7 @@ resource "aws_vpc" "vpc" {
   cidr_block = "172.16.0.0/16"
 
   tags = {
-    Name = "${var.instance_name}_vpc"
+    Name = "${var.instance_name}-vpc"
   }
 }
 
@@ -28,7 +28,7 @@ resource "aws_subnet" "subnet" {
   availability_zone = "${var.region}a"
 
   tags = {
-    Name = "${var.instance_name}_subnet"
+    Name = "${var.instance_name}-subnet"
   }
 }
 
@@ -37,7 +37,7 @@ resource "aws_network_interface" "network_interface" {
   private_ips = ["172.16.10.100"]
 
   tags = {
-    Name = "${var.instance_name}_network_interface"
+    Name = "${var.instance_name}-nic"
   }
 }
 
