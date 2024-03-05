@@ -89,7 +89,7 @@ resource "aws_instance" "vm" {
   key_name               = "${var.instance_name}-key"
   subnet_id              = aws_subnet.subnet.id
   vpc_security_group_ids = [aws_security_group.security_group.id]
-  user_data = "${file("scripts/create-user.sh")}"
+  user_data              = file("scripts/create-user.sh")
 
   tags = {
     Name = var.instance_name
