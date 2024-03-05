@@ -6,7 +6,7 @@ variable "region" {
 
 variable "ssh_key" {
   type = string
-  description = "EC2 ssh key"
+  description = "SSH key"
 }
 
 variable "instance_type" {
