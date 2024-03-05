@@ -4,9 +4,14 @@ variable "region" {
   default     = "eu-west-1"
 }
 
+variable "ssh_key" {
+  type = string
+  description = "EC2 ssh key"
+}
+
 variable "instance_type" {
   type = string
-  description = "Type of EC2 instance to provision"
+  description = "EC2 instance type"
   default     = "t2.micro"
 }
 
