@@ -4,11 +4,6 @@ variable "region" {
   default     = "eu-west-1"
 }
 
-variable "ssh_key" {
-  type = string
-  description = "SSH key"
-}
-
 variable "instance_type" {
   type = string
   description = "EC2 instance type"
