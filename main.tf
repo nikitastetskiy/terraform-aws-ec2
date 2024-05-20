@@ -1,19 +1,3 @@
-data "aws_ami" "ami" {
-  most_recent = true
-
-  filter {
-    name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
-  }
-
-  filter {
-    name   = "virtualization-type"
-    values = ["hvm"]
-  }
-
-  owners = ["099720109477"] # Canonical
-}
-
 resource "aws_vpc" "vpc" {
   cidr_block = "172.16.0.0/16"
 
@@ -79,7 +63,7 @@ resource "aws_vpc_security_group_ingress_rule" "security_group_ingress_rule" {
 }
 
 resource "aws_instance" "vm" {
-  ami                    = data.aws_ami.ami.id
+  ami                    = "ami-0dba2cb6798deb6d8"
   instance_type          = var.instance_type
   key_name               = "${var.instance_name}-key"
   subnet_id              = aws_subnet.subnet.id
