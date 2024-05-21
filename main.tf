@@ -14,11 +14,6 @@ data "aws_ami" "ami" {
   owners = ["099720109477"] # Canonical
 }
 
-resource "aws_key_pair" "key_pair" {
-  key_name   = "${var.instance_name}-key"
-  public_key = var.ssh_key
-}
-
 resource "aws_vpc" "vpc" {
   cidr_block = "172.16.0.0/16"
 
