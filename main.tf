@@ -63,7 +63,7 @@ resource "aws_vpc_security_group_ingress_rule" "security_group_ingress_rule" {
 }
 
 resource "aws_instance" "vm" {
-  ami                    = "ami-0dba2cb6798deb6d8"
+  ami                    = "ami-01cd4de4363ab6ee8"
   instance_type          = var.instance_type
   key_name               = "${var.instance_name}-key"
   subnet_id              = aws_subnet.subnet.id
